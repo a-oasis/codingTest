@@ -1,0 +1,39 @@
+def solution(fees, records):#요금표,출입기록->시간계산,요금계산
+    answer = {}
+    cars={}
+    time={x.split()[1]:0 for x in records}#total time
+    for r in records:
+        r1=r.split()# time,num,INOUT
+        if(r1[2]=='IN'): # in out
+            cars[r1[1]]=r1[0]
+        else: 
+            outTime=r1[0].split(':')
+            inTime=cars[r1[1]].split(':')
+            h=int(outTime[0])-int(inTime[0])
+            m=int(outTime[1])-int(inTime[1])
+            m+=h*60
+            time[r1[1]]+=m
+            # fees =[time,fee,pertime,perfee]
+            del cars[r1[1]]
+    
+            
+    for i in cars.keys():
+        outTime=[23,59]
+        inTime=cars[i].split(':')
+        h=outTime[0]-int(inTime[0])
+        m=outTime[1]-int(inTime[1])
+        m+=h*60
+        time[i]+=m
+    
+        
+    for i in time:
+        print(time[i])
+        t=time[i]-fees[0]
+        t1=t//fees[2]
+        if(t<=0): t=0;t1=t//fees[2]
+        elif(t%fees[2]!=0): t1=t//fees[2]+1
+        print (fees[1]+t1*fees[3])
+        answer[i]=fees[1]+t1*fees[3]
+        
+    d=sorted(answer)   
+    return [answer[x] for x in d]
