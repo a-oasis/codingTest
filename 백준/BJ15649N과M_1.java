@@ -1,8 +1,10 @@
+package 백준;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
+public class BJ15649N과M_1 {
     static boolean[] selected;
 	static int[] result;
 	static int N,M;
@@ -41,3 +43,4 @@ public class Main {
     	}
     }
 }
+

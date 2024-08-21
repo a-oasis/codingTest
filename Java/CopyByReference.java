@@ -1,4 +1,4 @@
-package Java;
+
 
 public class CopyByReference {
     public static int solution(String[] user_id,String[] banned_id){

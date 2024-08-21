@@ -34,7 +34,7 @@ public class Solution {
         }
 
         for(int i=0;i<userIds.length;i++){
-            if(userIds[i].equals(candidateList))
+            if(userIds[i].equals(candidateList));
         }
         
         return answer;
