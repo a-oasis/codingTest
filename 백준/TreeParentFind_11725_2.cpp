@@ -4,6 +4,7 @@
 using namespace std;
 #define MAX 100001
 
+//메모리 정적 할당
 int N;
 int parents[MAX];
 bool visited[MAX];

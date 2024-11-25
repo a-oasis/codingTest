@@ -3,6 +3,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BJ14499주사위굴리기",
+            "request": "launch",
+            "mainClass": "백준.BJ14499주사위굴리기",
+            "projectName": "codingTest"
+        },
+        {
+            "type": "java",
+            "name": "BJ14499주사위굴리기",
+            "request": "launch",
+            "mainClass": "BJ.BJ14499주사위굴리기",
+            "projectName": "codingTest"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
@@ -18,7 +32,7 @@
             "name": "C/C++: g++.exe build and debug active file",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "program": "${fileDirname}/build/${fileBasenameNoExtension}.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "C:\\msys64\\ucrt64\\bin",
